@@ -1,2 +1,2 @@
 #!/bin/bash
-while read line; do echo $line; read; done
+i=0; while read line; do [ $((i % 2)) -eq 0 ] && echo "$line"; i=$((i + 1)); done
